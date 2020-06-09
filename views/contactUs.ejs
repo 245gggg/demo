@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body{
+  
+  
+  }
+  h1,p{
+   text-transform:uppercase;
+    letter-spacing: 3px;
+   }
+  .nav-item{
+    margin:0px 10px 0 10px;
+   }
+   .btn--gold{
+    background-color:#886735;
+     color:#FFFFFF;
+     margin:20px 0px 5px 0px ;
+    }
+     .btn--white{
+    background-color:#FFFFFF;
+     color:#886735;
+       margin:20px 0px 5px 0px ;
+    }
+    .btn--gold:hover{
+      background-color:rgb(228,99,70);
+    }
+    .btn--white:hover{
+      background-color:rgb(228,99,70);
+    }
+    .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+ li a{
+ color:white;
+ text-decoration:underline;
+ }
+ a:hover{
+  color:#886735;
+ }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark  fixed-top">
+  <a class="navbar-brand" href="/">Food Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center " id="collapsibleNavbar">
+    <ul class="navbar-nav ">
+      <li class="nav-item ">
+        <a class="nav-link" href="/menu/">Menu </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/locations">Location</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/catering">Catering</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="/shop">Shop</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="/loyalty">Loyalty</a>
+      </li>
+		 <li class="nav-item">
+        <a class="nav-link" href="/register">Register</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+		</li>
+		 <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+       <li class="nav-item"  style="background-color:#886735;color:#FFFFFF;padding:5px 10px 5px 10px">
+        <a class="nav-link" href="/store/order/id">Order Online</a>
+      </li> 
+      
+    </ul>
+  
+  </div>  
+ <i class="fa fa-cart-plus" style="font-size:36px;color:#886735;padding:5px 10px 5px 10px;float:right;">Cart</i>
+</nav>
+
+<div style="width:100%;height:40px"></div>
+	<div class="container">
+<% if(error && error.length>0){ %>
+	<div style="width:100%;height:40px"></div>
+<div class="alert alert-danger" role="alert"> <%= error %></div>
+<% }%>
+	<% if(success && success.length>0) { %>
+	<div style="width:100%;height:40px"></div>
+<div class="alert alert-success" role="alert"> <%= success %></div>
+</div>
+ <% } %>
+	</div>
+<div style=" background-image:url('https://image.freepik.com/free-photo/long-table-dinner-party-fine-dining-reataurant_71163-383.jpg');
+  background-repeat:no-repeat;background-attchment:fixed;background-size:cover;padding:50px 10px 20px 10px">
+        <div style="text-align:center;color:#FFFFFF;text-shadow:2px 2px 15px red">
+             <h1 style="font-size:80px;margin:100px 0px 50px;" >Contact us</h1>
+                
+        </div>
+</div>
+
+<div style="background-color:#FFFFFF;width:75%;margin:10px auto;">
+             <p style="text-align:center;">please fill out the form below with any other questions you may have</p>
+             <p style="color:#886735;text-align:center;font-weight:bold;font-size:40px;margin:25px 10px 10px;">SEND US A MESSAGE</p>
+             <form action="/contacting" method="post">
+                  <div class="form-row">
+                     <div class="col-6">
+                         <div class="form-group" >
+                              <label for="name">First name & Last name*</label>
+                              <input type="text" class="form-control" id="name"  name="name" required>
+                               <div class="valid-feedback">Valid.</div>
+                               <div class="invalid-feedback">Please fill out this field.</div>
+                         </div>
+                     </div>
+                     <div class="col-6">
+                        <div class="form-group">
+                              <label for="phone">Phone number*</label>
+                              <input type="text" class="form-control" id="phone"  name="phone" required>
+                               <div class="valid-feedback">Valid.</div>
+                               <div class="invalid-feedback">Please fill out this field.</div>
+                         </div>
+                     </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                              <label for="email">Email Address*</label>
+                              <input type="text" class="form-control" id="email"  name="email" required>
+                               <div class="valid-feedback">Valid.</div>
+                               <div class="invalid-feedback">Please fill out this field.</div>
+                              <h6>enter email</h6>
+                         </div>
+                     </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                              <label for="emailC">Confirm*</label>
+                              <input type="text" class="form-control" id="emailC"  name="emailC" required>
+                               <div class="valid-feedback">Valid.</div>
+                               <div class="invalid-feedback">Please fill out this field.</div>
+                              <h6>Confirm email</h6>
+                         </div>
+                     </div>
+                 </div>
+               <h5>Reason for contacting us*</h5>
+               <div class="form-check" style="margin:15px">
+                  <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="optradio" value="inquiring">Inquiring
+                  </label>
+               </div>
+               <div class="form-check" style="margin:15px">
+                  <label class="form-check-label">
+                     <input type="radio" class="form-check-input" name="optradio" value="catering">Catering
+                  </label>
+               </div>
+               <div class="form-check " style="margin:15px">
+                     <label class="form-check-label">
+                           <input type="radio" class="form-check-input" name="optradio" value="loyalty">Loyalty program
+                     </label>
+                </div>
+                 <div class="form-check" style="margin:15px">
+                     <label class="form-check-label">
+                           <input type="radio" class="form-check-input" name="optradio" value="wedding">wedding info
+                     </label>
+                </div>
+               <button type="submit" class="btn btn--gold" style="margin:20px">Submit</button>
+            </form>
+                
+</div>
+ 
+
+
+<div style="background-color:#000000;">
+     <div style="text-align:center;color:#FFFFFF">
+                <p style="font-size:16px;padding:65px 0px 5px 0px;">Subscribe to our mailing address</p>
+                <div style="padding:0px 10px 100px 10px">
+                   <input type="text" placeholder="Enter Email" name="EMAIL" style="width:400px;padding:6px 12px;background-color:#FFFFFF;color:#000000;"/>
+                   <a href="#" class="btn btn--gold" style="margin:8px 0px 5px;">Subscribe</a>
+                   </br>
+                </div>
+             <div style="color:#FFFFFF;margin:0% 5%" class="clearfix">
+              <div style="float:left;width:25%;padding:20px;">
+               <p>LOCATIONS</p>
+               
+               
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CAROLLWOOD</a> </br>
+              
+              
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CARAL SPRINGS</a></br>
+               
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+              
+               </div>
+               <div style="float:left;width:25%;padding:20px;">
+               <ul style="list-style-type:none">
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CAROLLWOOD</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CARAL SPRINGS</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+               </li>
+               </ul>
+               </div>
+               <div style="float:left;width:25%;padding:20px;">
+               <ul style="list-style-type:none">
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CAROLLWOOD</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CARAL SPRINGS</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+               </li>
+               </ul>
+               </div>
+                <div style="float:left;width:25%;padding:20px;">
+                <ul style="list-style-type:none">
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CAROLLWOOD</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CARAL SPRINGS</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+               </li>
+               </ul>
+               </div>
+               <div style="float:left;width:50%;height:300px;padding:50px;margin:auto;background-image:url('https://image.freepik.com/free-photo/food-with-ingredients_1220-4884.jpg'); background-repeat:no-repeat;background-attchment:fixed;background-size:cover;">
+                <em style="font-size:20px">Pitmaster loyalty Club</em>
+               </div>
+               <div style="float:left;width:50%;padding:20px;">
+               <p>CONTACT DETAILS</p>
+                <p >1-844-4RIVERS</p>
+                 <p>(1-844-474-4456)</p>
+                 <p>Downtown Orando</p>
+                   <a href="#" class="btn btn--gold">CONTACT US</a>
+               </div>
+             </div>
+           </div>
+          </div>
+</body>
+</html>

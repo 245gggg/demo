@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Catering</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body{
+  
+  
+  }
+  h1,p{
+   text-transform:uppercase;
+    letter-spacing: 3px;
+   }
+  .nav-item{
+    margin:0px 10px 0 10px;
+   }
+   .btn--gold{
+    background-color:#886735;
+     color:#FFFFFF;
+     margin:20px 0px 5px 0px ;
+    }
+     .btn--white{
+    background-color:#FFFFFF;
+     color:#886735;
+       margin:20px 0px 5px 0px ;
+    }
+    .btn--gold:hover{
+      background-color:rgb(228,99,70);
+    }
+    .btn--white:hover{
+      background-color:rgb(228,99,70);
+    }
+    .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+ li a{
+ color:white;
+ text-decoration:underline;
+ }
+ a:hover{
+  color:#886735;
+ }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark  fixed-top">
+  <a class="navbar-brand" href="/">Food Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center " id="collapsibleNavbar">
+    <ul class="navbar-nav ">
+      <li class="nav-item ">
+        <a class="nav-link" href="/menu/">Menu </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/locations">Location</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/catering">Catering</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="/shop">Shop</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="/loyalty">Loyalty</a>
+      </li>
+		 <li class="nav-item">
+        <a class="nav-link" href="/register">Register</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+		</li>
+		 <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+       <li class="nav-item"  style="background-color:#886735;color:#FFFFFF;padding:5px 10px 5px 10px">
+        <a class="nav-link" href="/store/order/id">Order Online</a>
+      </li> 
+      
+    </ul>
+  
+  </div>  
+ <i class="fa fa-cart-plus" style="font-size:36px;color:#886735;padding:5px 10px 5px 10px;float:right;">Cart</i>
+</nav>
+
+
+<div style="width:100%;height:40px"></div>
+	<div class="container">
+<% if(error && error.length>0){ %>
+	<div style="width:100%;height:40px"></div>
+<div class="alert alert-danger" role="alert"> <%= error %></div>
+<% }%>
+	<% if(success && success.length>0) { %>
+	<div style="width:100%;height:40px"></div>
+<div class="alert alert-success" role="alert"> <%= success %></div>
+</div>
+ <% } %>
+	</div>
+<div style=" background-image:url('https://image.freepik.com/free-photo/doner-kebab-is-lying-cutting-board-shawarma-with-chicken-meat-onions-salad-lies-dark-old-wooden-table_120795-41.jpg');
+  background-repeat:no-repeat;background-attchment:fixed;background-size:cover;height:500px;padding:50px 10px 20px 10px">
+        <div style="text-align:center;color:#FFFFFF">
+             <h1 style="font-size:80px;margin:50px 0px 0px;" >catering done right</h1>
+                <p style="font-size:20px;padding:20px 0px 5px 0px;">For offices,events,parties,weddings,& more</p>
+                </br>
+                <a href="#" class="btn btn--white">Order catering online</a>
+                </br>
+                
+             
+        </div>
+</div>
+
+<div>
+     <div style="text-align:center;border:1px solid black;">
+             <h1 style="font-size:40px;font-style:italic;margin:0px auto;padding:70px;display:inline-block;">WAGON LOAD</h1>
+             <i class="fa fa-plus-circle" style="font-size:36px;"></i>
+       </div>
+  </div>
+<div>
+     <div style="text-align:center;border:1px solid black;">
+             <h1 style="font-size:40px;font-style:italic;margin:0px auto;padding:70px;display:inline-block;">SMOKEHOUSE SHINDING</h1>
+             <i class="fa fa-plus-circle" style="font-size:36px;"></i>
+       </div>
+  </div>
+<div>
+     <div style="text-align:center;border:1px solid black;">
+             <h1 style="font-size:40px;font-style:italic;margin:0px auto;padding:70px;display:inline-block;">A LA CARTE DELIVERY</h1>
+             <i class="fa fa-plus-circle" style="font-size:36px;"></i>
+       </div>
+  </div>
+<div>
+     <div style="text-align:center;border:1px solid black;">
+             <h1 style="font-size:40px;font-style:italic;margin:0px auto;padding:70px;display:inline-block;">4R SWEET SHOP</h1>
+             <i class="fa fa-plus-circle" style="font-size:36px;"></i>
+       </div>
+  </div>
+<div style="text-align:center;">
+ <img src="https://lh3.googleusercontent.com/KRE5sNkAlK88l-cDwfCXRamai5YGcc37DMzP3pCFXeh65lLTNHRxoSZQHNzgYEaq6Amze3SGFuVSlg6F_dapbFI5zINWxPBW5u9m7VEbnsPNTLPau9fe5c7DjQqOaIEhmFINCN3WLBMswHrnCf5jWKXPW11x6sOyGkuTy-HgP7vvE_4UR3vhK18sUVRHt_AppDfIyAL6hTLT2p5zqlmKlgEBFObYESXVh5ntoMdTCr-i7O0pzklJKJEZn5twuAnm9b3tqeWziaRVNdzEor9v5oHWARgUINRQP9ZqQUimO1SdqWtEGdqnrgGQCTfeW7zYKBclnyw9e255VKXVedFQISptM1Nd9lQKGA59LY5_Ptp25RrmsH4Gczpy7r7bf7-UDMc-Hf9s0ljZPkqpkaqRlHSsRAdNmYC_PB_nD_x3lNtJDCxUmhk1WbcS90UnpzZxoled6qSgkq5436uB1HLk74HfzQ7L5QYty5qEPQAYGz8dkWJmt-8L0FBmxvq1ly08RQudgbmMlk0Kxc945Kjlli1kRuua6OnD64hFZ2N2YJZzvPI0hp5mTlmxYYBR0ZJ4F9FSJO5pbx-CsBVjeeqU2_xiFnwaLDAzAlU_60l3CucU3Ou3xAYmgmQ8iY5nqMNaJOqETZ48sUHnY4L8df_Y-jWIbiIYCPQRkOTE1VC71DLk-AKe0hF_CMu-L0ckkA=w959-h429-no?authuser=0" height="400" style="margin:10px auto;display:block">
+ <h1 style="font-size:30px;font-style:italic;padding:50px auto;display:block;">The branch wedding catering</h1>
+ <img src="https://lh3.googleusercontent.com/5lfETMlfFQdqNvGRjznbaON5lTnelYh9djNe9POSq9yVxehwyoRrOivWuO8wFXKUGNybsVfY_Fkvb35Qf3ZqeChbozPI2_egewzumZ6yiG84u4zM4avRRUURYDFA4iZV5P067yNhYztrCLUlZvskmXzUWJe2DY9hIyOvC2yUMHo7tsY5JKLerixaipOIXrW3RxuKFMy3-HLkamZMz82PFqDHyjZ1hApA1AMuph7vjziVFo5VnVxSFvFMloBn5JbToFqSXCm6lz-qoTR9HWQN9kdZgjC5Q0Z8pjGJ33ixwT-EuLZ0oTrWodOohSAZDrhKtLBXD5y3iZMU-P4eHXFaYNeb-2cJ8vsLccoeb24Y2IGh9wOfp1egmMwD35jU8LH9gi_dx8bZ8VC-s0UCJB_usJWldVodo10gttJwS5EIn3P87V0p61D6nnyhZrH-vhKrMGyK9Y_8220BGRzMwYgKWQTFxn3g2uDS9zVIUEFLLhUWGlINE0BI0ePMlrySbLkEbVDP6N5k3RDi30IgiDZr7udspodpqBtdMAv3h-7UMJvyKDcTRXzpqDjAGDXKh3hPyD0Ijp2dZNZEsD1Ydj53sV7GbXbNZQsrxJxsSL3nZmv42nluUoUunBSFvfQISjyIL08t-VWnMsFibvcIiSGHoUGTGzqpjBHddEmr2nJxlafd35_asrSBRLelSxcq7g=w1302-h320-no?authuser=0" style="margin:10px auto;display:block">
+ <p style="width:800px;margin:10px auto">At The Branch, our wedding catering division, we take great pride in serving a broad array of
+ delicious cuisine... from Smokehouse specialties and savory Southern favorites to your personal
+ 'must-haves', customized by you. We'll work with you to create your special menu, perfectly tailored
+ to your event, budget and taste. We incorporate an element of beautiful design in our cuisine, 
+to make our offerings as irresistible to the eye as they are to the palate. Our superior service accommodates
+ any theme and tone, from chef stations to buffets, to passed service and table service, in any setting from the
+ most intimate to the largest venue locations.</p>
+ <img src="https://lh3.googleusercontent.com/rn7HJKtQS0o-5bdPxH6vD5kJffz1-VretxaYSdgklmB0Uuwttw8VvaR5xL3WgMVCe7DNKIofwE01oT4TP_bgBOz5FG9r12vbDh_m0xdq9_kzpEPDOnIGNaja-IHFLwQOMoVKGX43eE71I-v8baNQjXO2GNlwCyFkwr3SzZQv2o7o5wobREUel8Y3p43F2eZ-UQhcbeiAk0aSJlDDUqHBmK0lQig8SeoyC9YEHaUovYa7C7_jLS14rM7KRkgG3ypYW7HqfDY6RTDjDheVSzy0xKppo_xXM6jI1-rKRAf_m14T4FOOE8k_EHxg4Kzn-f9SxgUUUyBhp7fY24yvhpMUiSMH-KI7cFKvUuMMynHzGT4Exe05aW501xg9GAwxUP4JJNOCS0ZIA5cbf2NGm-oe_0M4jaA-RFMoMT4m_Gxsm8U0pkbxccRatIvIXURA-wii6a8nXmq6gXv-dhvFS072d3B2MrkRGkFlawI-UyTuLBNVMmYJqEZ19q_KZ6DITLeWTSEZUG4lV9wj5YNIQs8nRk7nPcYDY57yL9EiRllF3zW0S30WEEIUwa7xq3fq5z7eaI31Z3lh408Lr1r7zdgdC_rqBpaiq3SacXRrM39tVzChrp6JxBOo998mQNB7FJ0yBGM_8O4-rWD6H0e5kfEJ-2W1vzaeGKYVh-BkeOt0iZreBBKk_Fu3jGsFE2ubcA=w1233-h334-no?authuser=0" style="margin:10px auto;display:block">
+ <p style="width:800px;margin:10px auto">The Sweet Shop and 4R Specialty Cakes are led by a 
+batch of award-winning pastry chefs and talented bakers with a passion for crafting lasting memories through 
+decadent desserts. We pour love into each one of our specialty cakes. No cake dream is too big (or too small) 
+for our team to make a reality. We love a challenge... so give
+ us your plans, or leave it to our imaginative crew to create a mouthwatering masterpiece for your big day!</p>
+ 
+                </br>
+   <h1 style="font-size:50px;font-style:bold;padding:60px auto;display:block;">delivery and catering</h1>
+    <p style="width:800px;margin:10px auto">With advanced notice, 4 Rivers Smokehouse can deliver lunch or dinner to your work, location, or private residence. Free delivery within a 10 mile radius of our catering facility, with an additional fee for further mileage. Delivery orders include a hot drop-off and quick onsite set-up. Minimum Order is required for delivery and for catered events. All packages are priced per-person. Includes 4R signature BBQ sauce, buns, plates, utensils and napkins. We also offer your choice of bottled water, soda or lemonade, sweet tea and unsweet tea for an additional fee per person.
+
+The 4 Rivers Smokehouse Catering team would love to cater your next event! From picnics in the park, upscale weddings on the beach, to corporate events and recognition parties, no event is too small or too large. Let us bring our award-winning BBQ to your event!
+
+Choosing catering from 4 Rivers Smokehouse will allow you to enjoy your party or event by leaving the details of set-up, service and clean-up to our catering team. Catering includes chafing dishes, décor, and accents with the assistance of your Catering Sales Manager. Premium catering is available for an additional charge and includes upgraded utensils and service ware.
+4 Rivers Catering, Pick Up, and Delivery is not available on Sundays.</p>
+</div>
+
+<div style="background-color:#FFFFFF;">
+     <div style="text-align:center;border:1px solid black;">
+             <h1 style="font-size:50px;margin:0px auto;padding:90px 0px 10px;width:600px;">Ready for dinner?</h1>
+               </br>
+                <a href="/locations" class="btn btn--gold"style="margin:0px 0px 50px;">Find a location</a>
+                </br>
+       </div>
+  </div>
+
+<div style="background-color:#000000;">
+     <div style="text-align:center;color:#FFFFFF">
+                <p style="font-size:16px;padding:65px 0px 5px 0px;">Subscribe to our mailing address</p>
+                <div style="padding:0px 10px 100px 10px">
+                   <input type="text" placeholder="Enter Email" name="EMAIL" style="width:400px;padding:6px 12px;background-color:#FFFFFF;color:#000000;"/>
+                   <a href="#" class="btn btn--gold" style="margin:8px 0px 5px;">Subscribe</a>
+                   </br>
+                </div>
+             <div style="color:#FFFFFF;margin:0% 5%" class="clearfix">
+              <div style="float:left;width:25%;padding:20px;">
+               <p>LOCATIONS</p>
+               
+               
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CAROLLWOOD</a> </br>
+              
+              
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CARAL SPRINGS</a></br>
+               
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+              
+               </div>
+               <div style="float:left;width:25%;padding:20px;">
+               <ul style="list-style-type:none">
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CAROLLWOOD</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CARAL SPRINGS</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+               </li>
+               </ul>
+               </div>
+               <div style="float:left;width:25%;padding:20px;">
+               <ul style="list-style-type:none">
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CAROLLWOOD</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CARAL SPRINGS</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+               </li>
+               </ul>
+               </div>
+                <div style="float:left;width:25%;padding:20px;">
+                <ul style="list-style-type:none">
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CAROLLWOOD</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >CARAL SPRINGS</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+               </li>
+               <li>
+               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
+               <a href="#" >DAYTONA</a>
+               </li>
+               </ul>
+               </div>
+               <div style="float:left;width:50%;height:300px;padding:50px;margin:auto;background-image:url('https://image.freepik.com/free-photo/food-with-ingredients_1220-4884.jpg'); background-repeat:no-repeat;background-attchment:fixed;background-size:cover;">
+                <em style="font-size:20px">Pitmaster loyalty Club</em>
+               </div>
+               <div style="float:left;width:50%;padding:20px;">
+               <p>CONTACT DETAILS</p>
+                <p >1-844-4RIVERS</p>
+                 <p>(1-844-474-4456)</p>
+                 <p>Downtown Orando</p>
+                   <a href="#" class="btn btn--gold">CONTACT US</a>
+               </div>
+             </div>
+           </div>
+          </div>
+</body>
+</html>
