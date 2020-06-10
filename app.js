@@ -13,7 +13,7 @@ var express        = require("express"),
 	Item           = require("./models/item"),
     middleware     = require("./middleware");
 var url = process.env.DATABASEURL || 
-	"mongodb+srv://MounikaM:mouni01234@mounika-gepc7.mongodb.net/test?retryWrites=true&w=majority";
+	"mongodb+srv://MounikaM:mouni01234@cluster0-4j1gn.mongodb.net/project?retryWrites=true&w=majority";
 mongoose.connect(url);
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
