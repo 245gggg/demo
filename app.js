@@ -211,4 +211,6 @@ app.post("/shop", function(req, res){
 app.get("/contactUs", function(req, res){
     res.render("contactUs.ejs");
 });
-app.listen(3000);
+app.listen(process.env.PORT, process.env.IP, function(){
+   console.log("The YelpCamp Server Has Started!");
+});
