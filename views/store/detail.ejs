@@ -91,7 +91,11 @@
     </ul>
   
   </div>  
- <i class="fa fa-cart-plus" style="font-size:36px;color:#886735;padding:5px 10px 5px 10px;float:right;">Cart</i>
+ <li class="nav-item"  style="float:right">
+		  
+        <a class="nav-link" href="/store/cart/null" style="display:inline"><i class="fa fa-cart-plus" style="font-size:36px;color:#886735;padding:5px 10px 5px 10px;"></i></a>
+		 
+      </li> 
 </nav>
 <div style="width:100%;height:80px"></div>
 	<div class="container">
@@ -122,95 +126,42 @@
      <div style="text-align:center;color:#FFFFFF">
                 <p style="font-size:16px;padding:65px 0px 5px 0px;">Subscribe to our mailing address</p>
                 <div style="padding:0px 10px 100px 10px">
-                   <input type="text" placeholder="Enter Email" name="EMAIL" style="width:400px;padding:6px 12px;background-color:#FFFFFF;color:#000000;"/>
-                   <a href="#" class="btn btn--gold" style="margin:8px 0px 5px;">Subscribe</a>
-                   </br>
+				 <form action="/subscribe" method="post">
+                
+                <div style="padding:0px 10px 100px 10px">
+                <input type="text" placeholder="Enter Email" name="email" style="width:400px;padding:6px 12px;background-color:#FFFFFF;color:#000000;"/>
+                  <button type="submit" class="btn btn--gold" value="subscribe" >Subscribe</button>
+</form>
+          
                 </div>
              <div style="color:#FFFFFF;margin:0% 5%" class="clearfix">
-              <div style="float:left;width:25%;padding:20px;">
+              <div style="float:left;width:33.33%;padding:20px;">
                <p>LOCATIONS</p>
                
                
                <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CAROLLWOOD</a> </br>
+               <a href="/location/tirupathi" style="color:white" >TIRUPATHI</a> </br>
               
               
                <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CARAL SPRINGS</a></br>
+               <a href="/location/hyderabad" style="color:white">HYDERABAD</a></br>
                
                <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
+               <a href="/location/bangalore"  style="color:white">BANGALORE</a>
               
                </div>
-               <div style="float:left;width:25%;padding:20px;">
-               <ul style="list-style-type:none">
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CAROLLWOOD</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CARAL SPRINGS</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
-               </li>
-               </ul>
+              
+               
+              
+               <div style="float:left;width:30%;height:300px;padding:50px;margin:auto;background-image:url('https://image.freepik.com/free-photo/food-with-ingredients_1220-4884.jpg'); background-repeat:no-repeat;background-attchment:fixed;background-size:cover;">
+				   <em style="font-size:20px" ><a href="/loyalty">Pitmaster loyalty Club</a></em>
                </div>
-               <div style="float:left;width:25%;padding:20px;">
-               <ul style="list-style-type:none">
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CAROLLWOOD</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CARAL SPRINGS</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
-               </li>
-               </ul>
-               </div>
-                <div style="float:left;width:25%;padding:20px;">
-                <ul style="list-style-type:none">
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CAROLLWOOD</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CARAL SPRINGS</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
-               </li>
-               </ul>
-               </div>
-               <div style="float:left;width:50%;height:300px;padding:50px;margin:auto;background-image:url('https://image.freepik.com/free-photo/food-with-ingredients_1220-4884.jpg'); background-repeat:no-repeat;background-attchment:fixed;background-size:cover;">
-                <em style="font-size:20px">Pitmaster loyalty Club</em>
-               </div>
-               <div style="float:left;width:50%;padding:20px;">
+               <div style="float:left;width:30%;padding:20px;">
                <p>CONTACT DETAILS</p>
                 <p >1-844-4RIVERS</p>
                  <p>(1-844-474-4456)</p>
                  <p>Downtown Orando</p>
-                   <a href="#" class="btn btn--gold">CONTACT US</a>
+                   <a href="/contactUs" class="btn btn--gold">CONTACT US</a>
                </div>
              </div>
            </div>

@@ -12,8 +12,9 @@ var express        = require("express"),
 	seedDB         = require("./seeds"),
 	Item           = require("./models/item"),
     middleware     = require("./middleware");
-
-mongoose.connect("mongodb://localhost/project");
+var url = process.env.DATABASEURL || 
+	"mongodb+srv://MounikaM:mouni01234@mounika-gepc7.mongodb.net/test?retryWrites=true&w=majority";
+mongoose.connect(url);
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
@@ -160,6 +161,15 @@ app.get("/store/:id", function(req, res){
         }
     });
 });
+app.delete("/store/cart/:id", middleware.isLoggedIn, function(req, res){
+    //findByIdAndRemove
+   req.user.cartItems = req.user.cartItems.filter(function(value, index, arr){ return value !=req.params.id});
+	       req.user.save();
+           
+          res.render("store/cart.ejs",{items:req.user.cartItems});
+   
+});
+
 app.get("/location/:id", function(req, res){
     //find the campground with provided ID
    
@@ -173,14 +183,16 @@ app.get("/store/cart/:id",middleware.isLoggedIn, function(req, res){
     Item.findById(req.params.id).exec(function(err, foundCampground){
         if(err){
             console.log(err);
+			res.render("store/cart.ejs",{items:req.user.cartItems});
         } else {
-           
-				
-					res.render("store/cart.ejs", {item:foundCampground,User:User,Item:Item});
-			
-            
+               if(!(req.user.cartItems.includes(foundCampground.name))){
+				 req.user.cartItems.push(foundCampground.name);
+			      req.user.save();  
+			   }		  
+			res.render("store/cart.ejs",{items:req.user.cartItems});
         }
-    });
+					
+	});
 });
 app.get("/store/order/id",middleware.isLoggedIn, function(req, res){
    res.render("store/Order.ejs", {User:User});       

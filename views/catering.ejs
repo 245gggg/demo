@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
   <title>Catering</title>
+	<script type="text/javascript">
+
+    function toggle_visibility(id) {
+       var e = document.querySelector(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+	</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -49,6 +59,14 @@
  a:hover{
   color:#886735;
  }
+	  .HoverOn:hover{
+		  background-color:black;
+		  color:white;
+	  }
+	   .HoverOn{
+		  background-color:white;
+		  color:black;
+	  }
   </style>
 </head>
 <body>
@@ -91,7 +109,11 @@
     </ul>
   
   </div>  
- <i class="fa fa-cart-plus" style="font-size:36px;color:#886735;padding:5px 10px 5px 10px;float:right;">Cart</i>
+  <li class="nav-item"  style="float:right">
+		  
+        <a class="nav-link" href="/store/cart/null" style="display:inline"><i class="fa fa-cart-plus" style="font-size:36px;color:#886735;padding:5px 10px 5px 10px;"></i></a>
+		 
+      </li> 
 </nav>
 
 
@@ -113,37 +135,317 @@
              <h1 style="font-size:80px;margin:50px 0px 0px;" >catering done right</h1>
                 <p style="font-size:20px;padding:20px 0px 5px 0px;">For offices,events,parties,weddings,& more</p>
                 </br>
-                <a href="#" class="btn btn--white">Order catering online</a>
+                <a href="/contactUs" class="btn btn--white">Contact Us for Catering</a>
                 </br>
                 
              
         </div>
 </div>
 
+
 <div>
-     <div style="text-align:center;border:1px solid black;">
-             <h1 style="font-size:40px;font-style:italic;margin:0px auto;padding:70px;display:inline-block;">WAGON LOAD</h1>
-             <i class="fa fa-plus-circle" style="font-size:36px;"></i>
-       </div>
-  </div>
+     <div class="HoverOn"  style="text-align:center;border:1px solid black;">
+             <h1 style="font-size:30px;font-style:italic;margin:0px auto;padding:70px;display:inline-block;">WAGON LOAD</h1>
+             <i class="fa fa-plus-circle" onclick="toggle_visibility('#bbq')" style="font-size:36px;"></i>
+	</div>
+		     <div id="bbq" style="display:none;padding:30px 100px;border:1px solid black;" >
+				 <h1 style="margin:40px;color:rgb(228,99,70);text-align:center">
+					SMOKEHOUSE MEATS
+				 </h1>
+				 <p  style="margin=10px">
+					FOR PRICING INFORMATION, CLICK OUR DELIVERY AND FULL-SERVICE CATERING PDFS
+				 </p>
+				 <div class="row">
+					 <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+						BEEF BRISKET	 
+						 </h4>
+						 <p>
+							4R signature dry rubbed 18-hour smoked Angus brisket, sliced lean or moist
+						 </p>
+					 </div>
+					  <div class="col-6">
+						  <h4 style="color:rgb(228,99,70)">
+							SOUTHERN PULLED PORK
+
+						 </h4>
+						 <p>
+						Southern-style smoked pulled pork 
+							 
+						 </p>
+					 </div>
+					  <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							PULLED CHICKEN 
+						 </h4>
+						 <p>
+							Pulled smoked chicken 
+							 
+						 </p> 
+					 </div>
+					  <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							SMOKED TURKEY
+						 </h4>
+						 <p>
+							Warm, sliced, seasoned smoked turkey	 
+						 </p> 
+					 </div>
+				 </div>
+		 
+	      <h1 style="margin:40px;color:rgb(228,99,70);text-align:center">
+					SIDES
+				 </h1>
+				 <p  style="margin=10px">
+					ADDITIONAL SIDE: $2 PER PERSON
+				 </p>
+				 <div class="row">
+					 <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							BBQ BEANS 
+						 </h4>
+						 <p>
+							Savory BBQ baked beans made with brisket and pork
+						 </p>
+					 </div>
+					  <div class="col-6">
+						  <h4 style="color:rgb(228,99,70)">
+							COLLARD GREENS
+
+
+						 </h4>
+						 <p>
+						Classic collard greens made with ham
+							 
+						 </p>
+					 </div>
+					  <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							COLESLAW 
+						 </h4>
+						 <p>
+							Homestyle creamy sweet dressing with fresh cabbage and carrots
+							 
+						 </p> 
+					 </div>
+					  <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							BAKED CHEESE GRITS
+
+						 </h4>
+						 <p>
+							BAKED CHEESE GRITS
+Grits baked to perfection with cheddar cheese	 
+						 </p> 
+					 </div>
+				 </div>
+		 </div>
+        
+		 </div>
+       
 <div>
-     <div style="text-align:center;border:1px solid black;">
-             <h1 style="font-size:40px;font-style:italic;margin:0px auto;padding:70px;display:inline-block;">SMOKEHOUSE SHINDING</h1>
-             <i class="fa fa-plus-circle" style="font-size:36px;"></i>
+     <div class="HoverOn"  style="text-align:center;border:1px solid black;">
+             <h1 style="font-size:30px;font-style:italic;margin:0px auto;padding:70px;display:inline-block;">SMOKEHOUSE SHINDIG</h1>
+             <i class="fa fa-plus-circle" onclick="toggle_visibility('#john')" style="font-size:36px;"></i>
+	</div>
+		 <div id="john" style="display:none;padding:30px 100px;border:1px solid black;" >
+				 <h1 style="margin:40px;color:rgb(228,99,70);text-align:center">
+					 APPETIZERS
+				 </h1>
+				 <p  style="margin=10px">
+					 
+				 </p>
+				 <div class="row">
+					 <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+						BBQ QUESADILLAS
+						 </h4>
+						 <p>
+							Brisket, Pulled Chicken, or Pulled Pork quesadillas
+						 </p>
+					 </div>
+					  <div class="col-6">
+						  <h4 style="color:rgb(228,99,70)">
+							TEXAS DESTROYER
+						 </h4>
+						 <p>
+							Signature Angus brisket, topped with onion rings, jalapeños, melted provolone, served on a brioche bun and smothered in 4R Signature Sauc
+							 
+						 </p>
+					 </div>
+					  <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							THE LONGHORN							
+
+						 </h4>
+						 <p>
+							Chopped brisket, Texas sausage served on a toasted roll over smokehouse relish, topped with onion rings and melted provolone.
+							 
+						 </p> 
+					 </div>
+					  <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							BBQ STREET TACOS 
+						 </h4>
+						 <p>
+							Three grilled tortillas loaded with your choice of meat, pico de gallo, queso fresco, guasacaca, and crème fraîche topped with fresh chopped cilantro.
+						 </p> 
+					 </div>
+				 </div>
+		
+	        <h1 style="margin:40px;color:rgb(228,99,70);text-align:center">
+					SIDES
+				 </h1>
+				 <p  style="margin=10px">
+					ADDITIONAL SIDE: $2 PER PERSON
+				 </p>
+				 <div class="row">
+					 <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							BBQ BEANS 
+						 </h4>
+						 <p>
+							Savory BBQ baked beans made with brisket and pork
+						 </p>
+					 </div>
+					  <div class="col-6">
+						  <h4 style="color:rgb(228,99,70)">
+							COLLARD GREENS
+
+
+						 </h4>
+						 <p>
+						Classic collard greens made with ham
+							 
+						 </p>
+					 </div>
+					  <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							COLESLAW 
+						 </h4>
+						 <p>
+							Homestyle creamy sweet dressing with fresh cabbage and carrots
+							 
+						 </p> 
+					 </div>
+					  <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							BAKED CHEESE GRITS
+
+						 </h4>
+						 <p>
+							BAKED CHEESE GRITS
+Grits baked to perfection with cheddar cheese	 
+						 </p> 
+					 </div>
+				 </div>
+		 </div>
        </div>
-  </div>
+ 
 <div>
-     <div style="text-align:center;border:1px solid black;">
-             <h1 style="font-size:40px;font-style:italic;margin:0px auto;padding:70px;display:inline-block;">A LA CARTE DELIVERY</h1>
-             <i class="fa fa-plus-circle" style="font-size:36px;"></i>
-       </div>
-  </div>
-<div>
-     <div style="text-align:center;border:1px solid black;">
-             <h1 style="font-size:40px;font-style:italic;margin:0px auto;padding:70px;display:inline-block;">4R SWEET SHOP</h1>
-             <i class="fa fa-plus-circle" style="font-size:36px;"></i>
-       </div>
-  </div>
+     <div class="HoverOn" style="text-align:center;border:1px solid black;">
+             <h1 style="font-size:30px;font-style:italic;margin:0px auto;padding:70px;display:inline-block;">A LA CARTE DELIVERY</h1>
+             <i class="fa fa-plus-circle" onclick="toggle_visibility('#fresh')" style="font-size:36px;"></i>
+	</div>
+	</div>
+		  <div id="fresh" style="display:none;padding:30px 100px;border:1px solid black;" >
+				 <h1 style="margin:40px;color:rgb(228,99,70);text-align:center">
+					 APPETIZERS
+				 </h1>
+				 <p  style="margin=10px">
+				
+				 </p>
+				 <div class="row">
+					 <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+						BBQ QUESADILLAS 
+						 </h4>
+						 <p>
+							Brisket, Pulled Chicken, or Pulled Pork quesadillas
+						 </p>
+					 </div>
+					 <div class="col-6">
+						  <h4 style="color:rgb(228,99,70)">
+							TEXAS DESTROYER
+						 </h4>
+						 <p>
+							Signature Angus brisket, topped with onion rings, jalapeños, melted provolone, served on a brioche bun and smothered in 4R Signature Sauc
+							 
+						 </p>
+					 </div>
+					  <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							THE LONGHORN							
+
+						 </h4>
+						 <p>
+							Chopped brisket, Texas sausage served on a toasted roll over smokehouse relish, topped with onion rings and melted provolone.
+							 
+						 </p> 
+					 </div>
+					  <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							BBQ STREET TACOS 
+						 </h4>
+						 <p>
+							Three grilled tortillas loaded with your choice of meat, pico de gallo, queso fresco, guasacaca, and crème fraîche topped with fresh chopped cilantro.
+						 </p> 
+					 </div>
+				 </div>
+		
+		  <h1 style="margin:40px;color:rgb(228,99,70);text-align:center">
+					SIDES
+				 </h1>
+				 <p  style="margin=10px">
+					ADDITIONAL SIDE: $2 PER PERSON
+				 </p>
+				 <div class="row">
+					 <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							BBQ BEANS 
+						 </h4>
+						 <p>
+							Savory BBQ baked beans made with brisket and pork
+						 </p>
+					 </div>
+					  <div class="col-6">
+						  <h4 style="color:rgb(228,99,70)">
+							COLLARD GREENS
+
+
+						 </h4>
+						 <p>
+						Classic collard greens made with ham
+							 
+						 </p>
+					 </div>
+					  <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							COLESLAW 
+						 </h4>
+						 <p>
+							Homestyle creamy sweet dressing with fresh cabbage and carrots
+							 
+						 </p> 
+					 </div>
+					  <div class="col-6">
+						 <h4 style="color:rgb(228,99,70)">
+							BAKED CHEESE GRITS
+
+						 </h4>
+						 <p>
+							BAKED CHEESE GRITS
+Grits baked to perfection with cheddar cheese	 
+						 </p> 
+					 </div>
+				 </div>
+		 </div>
+      
+    
+
+
+
+
 <div style="text-align:center;">
  <img src="https://lh3.googleusercontent.com/KRE5sNkAlK88l-cDwfCXRamai5YGcc37DMzP3pCFXeh65lLTNHRxoSZQHNzgYEaq6Amze3SGFuVSlg6F_dapbFI5zINWxPBW5u9m7VEbnsPNTLPau9fe5c7DjQqOaIEhmFINCN3WLBMswHrnCf5jWKXPW11x6sOyGkuTy-HgP7vvE_4UR3vhK18sUVRHt_AppDfIyAL6hTLT2p5zqlmKlgEBFObYESXVh5ntoMdTCr-i7O0pzklJKJEZn5twuAnm9b3tqeWziaRVNdzEor9v5oHWARgUINRQP9ZqQUimO1SdqWtEGdqnrgGQCTfeW7zYKBclnyw9e255VKXVedFQISptM1Nd9lQKGA59LY5_Ptp25RrmsH4Gczpy7r7bf7-UDMc-Hf9s0ljZPkqpkaqRlHSsRAdNmYC_PB_nD_x3lNtJDCxUmhk1WbcS90UnpzZxoled6qSgkq5436uB1HLk74HfzQ7L5QYty5qEPQAYGz8dkWJmt-8L0FBmxvq1ly08RQudgbmMlk0Kxc945Kjlli1kRuua6OnD64hFZ2N2YJZzvPI0hp5mTlmxYYBR0ZJ4F9FSJO5pbx-CsBVjeeqU2_xiFnwaLDAzAlU_60l3CucU3Ou3xAYmgmQ8iY5nqMNaJOqETZ48sUHnY4L8df_Y-jWIbiIYCPQRkOTE1VC71DLk-AKe0hF_CMu-L0ckkA=w959-h429-no?authuser=0" height="400" style="margin:10px auto;display:block">
  <h1 style="font-size:30px;font-style:italic;padding:50px auto;display:block;">The branch wedding catering</h1>
@@ -185,95 +487,42 @@ Choosing catering from 4 Rivers Smokehouse will allow you to enjoy your party or
      <div style="text-align:center;color:#FFFFFF">
                 <p style="font-size:16px;padding:65px 0px 5px 0px;">Subscribe to our mailing address</p>
                 <div style="padding:0px 10px 100px 10px">
-                   <input type="text" placeholder="Enter Email" name="EMAIL" style="width:400px;padding:6px 12px;background-color:#FFFFFF;color:#000000;"/>
-                   <a href="#" class="btn btn--gold" style="margin:8px 0px 5px;">Subscribe</a>
-                   </br>
+				 <form action="/subscribe" method="post">
+                
+                <div style="padding:0px 10px 100px 10px">
+                <input type="text" placeholder="Enter Email" name="email" style="width:400px;padding:6px 12px;background-color:#FFFFFF;color:#000000;"/>
+                  <button type="submit" class="btn btn--gold" value="subscribe" >Subscribe</button>
+</form>
+          
                 </div>
              <div style="color:#FFFFFF;margin:0% 5%" class="clearfix">
-              <div style="float:left;width:25%;padding:20px;">
+              <div style="float:left;width:33.33%;padding:20px;">
                <p>LOCATIONS</p>
                
                
                <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CAROLLWOOD</a> </br>
+               <a href="/location/tirupathi" style="color:white" >TIRUPATHI</a> </br>
               
               
                <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CARAL SPRINGS</a></br>
+               <a href="/location/hyderabad" style="color:white">HYDERABAD</a></br>
                
                <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
+               <a href="/location/bangalore"  style="color:white">BANGALORE</a>
               
                </div>
-               <div style="float:left;width:25%;padding:20px;">
-               <ul style="list-style-type:none">
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CAROLLWOOD</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CARAL SPRINGS</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
-               </li>
-               </ul>
+              
+               
+              
+               <div style="float:left;width:30%;height:300px;padding:50px;margin:auto;background-image:url('https://image.freepik.com/free-photo/food-with-ingredients_1220-4884.jpg'); background-repeat:no-repeat;background-attchment:fixed;background-size:cover;">
+				   <em style="font-size:20px" ><a href="/loyalty">Pitmaster loyalty Club</a></em>
                </div>
-               <div style="float:left;width:25%;padding:20px;">
-               <ul style="list-style-type:none">
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CAROLLWOOD</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CARAL SPRINGS</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
-               </li>
-               </ul>
-               </div>
-                <div style="float:left;width:25%;padding:20px;">
-                <ul style="list-style-type:none">
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CAROLLWOOD</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >CARAL SPRINGS</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
-               </li>
-               <li>
-               <i class="fa fa-angle-right" style="font-size:20px;color:#886735"></i>
-               <a href="#" >DAYTONA</a>
-               </li>
-               </ul>
-               </div>
-               <div style="float:left;width:50%;height:300px;padding:50px;margin:auto;background-image:url('https://image.freepik.com/free-photo/food-with-ingredients_1220-4884.jpg'); background-repeat:no-repeat;background-attchment:fixed;background-size:cover;">
-                <em style="font-size:20px">Pitmaster loyalty Club</em>
-               </div>
-               <div style="float:left;width:50%;padding:20px;">
+               <div style="float:left;width:30%;padding:20px;">
                <p>CONTACT DETAILS</p>
                 <p >1-844-4RIVERS</p>
                  <p>(1-844-474-4456)</p>
                  <p>Downtown Orando</p>
-                   <a href="#" class="btn btn--gold">CONTACT US</a>
+                   <a href="/contactUs" class="btn btn--gold">CONTACT US</a>
                </div>
              </div>
            </div>
