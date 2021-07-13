@@ -12,7 +12,7 @@ var express        = require("express"),
 	seedDB         = require("./seeds"),
 	Item           = require("./models/item"),
     middleware     = require("./middleware");
-var url = process.env.MONGODB_URL || "mongodb+srv://mouni:mounika@cluster0.kttkg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+var url = process.env.MONGODB_URL || "mongodb+srv://mouni:mounika@cluster0.kttkg.mongodb.net/yelpcamp?retryWrites=true&w=majority";
 mongoose.connect(url);
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
