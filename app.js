@@ -12,8 +12,7 @@ var express        = require("express"),
 	seedDB         = require("./seeds"),
 	Item           = require("./models/item"),
     middleware     = require("./middleware");
-var url = process.env.DATABASEURL || 
-	"mongodb+srv://Mounika:Mouni0123#@cluster0.kttkg.mongodb.net/test";
+var url = "mongodb+srv://Mounika:Mouni0123#@cluster0.kttkg.mongodb.net/test";
 mongoose.connect(url);
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
