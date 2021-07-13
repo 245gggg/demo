@@ -212,4 +212,5 @@ app.get("/contactUs", function(req, res){
 });
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("The YelpCamp Server Has Started!");
+	console.log("Database_URL", process.env.DATABASE_URL);
 });
