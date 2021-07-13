@@ -12,7 +12,7 @@ var express        = require("express"),
 	seedDB         = require("./seeds"),
 	Item           = require("./models/item"),
     middleware     = require("./middleware");
-var url = "mongodb+srv://Mounika:<Mouni0123#>@cluster0.kttkg.mongodb.net/test";
+var url = process.env.MONGODB_URL || "mongodb+srv://Mounika:Mouni0123#@cluster0.kttkg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 mongoose.connect(url);
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
@@ -212,5 +212,5 @@ app.get("/contactUs", function(req, res){
 });
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("The YelpCamp Server Has Started!");
-	console.log("Database_URL", process.env.DATABASE_URL);
+	console.log("Database_URL", process.env.MONGODB_URL);
 });
